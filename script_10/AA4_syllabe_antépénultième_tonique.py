@@ -242,8 +242,11 @@ class SyllabeAntePenultieme:
                     #Consonne en milieu intervocalique
                     if syllabes[-4][-1] in listes_lettres['toutes_les_voyelles']:
                         if syllabes[-3][1] in ['E', 'Ẹ', 'I', 'Í']:
-                            if syllabes[-4][-1] == 'Ẹ':
-                                changements.append('s')
+                            if syllabes[-4][-1] in ['E', 'Ẹ']:
+                                if syllabes[-3][1] == 'Í':
+                                    changements.append('c')
+                                else:
+                                    changements.append('s')
                             else:
                                 changements.append('is')
                         #Pour l'évolution de l'occulsive palato-vélaire devant A, il faut tenir compte le timbre de la voyelle qui précède
@@ -880,8 +883,11 @@ class SyllabeAntePenultieme:
         #Vocalisme atone
         #A
         if 'A' in syllabes[-3]:
+            #Préfixe
+            if syllabes[-4][-1] == ' ':
+                changements.append('a')
             #Cas où la longueur syllabique est d'une lettre
-            if len(syllabes[-3]) == 1:
+            elif len(syllabes[-3]) == 1:
                 changements.append('e')
             #Si A se trouve en position ouvert
             elif syllabes[-3][-1] == 'A':
@@ -1402,6 +1408,8 @@ class SyllabeAntePenultieme:
                     else:
                         changements.append('ll')
                 elif syllabes[-2][0] == 'L':
+                    if syllabes[-3][-2] == 'Ę' and syllabes[2][1] == 'A':
+                        changements.append('l')
                     changements.append('')
                 #Vocalisation en wau
                 else:

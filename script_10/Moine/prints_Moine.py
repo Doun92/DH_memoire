@@ -1,6 +1,6 @@
 print(EvolutionPhonetique.evolution_phonetique("AB")) # a
-print(EvolutionPhonetique.evolution_phonetique("ACOSTÚDMÁRU")) # acotumé
-print(EvolutionPhonetique.evolution_phonetique("ADỌNC")) # adonc
+print(EvolutionPhonetique.evolution_phonetique("A COSTÚDMÁRU")) # acotumé
+print(EvolutionPhonetique.evolution_phonetique("A DỌNC")) # adonc
 print(EvolutionPhonetique.evolution_phonetique("HÁBYO")) # ai
 print(EvolutionPhonetique.evolution_phonetique("ÁNTS")) # ainz
 print(EvolutionPhonetique.evolution_phonetique("ÁYT")) # ait
@@ -9,27 +9,27 @@ print(EvolutionPhonetique.evolution_phonetique("AMĘN")) # amen
 print(EvolutionPhonetique.evolution_phonetique("AMÁBAT")) # amoit
 print(EvolutionPhonetique.evolution_phonetique("AMỌNT")) # amont
 print(EvolutionPhonetique.evolution_phonetique("ANGẸLLU")) # angel
-print(EvolutionPhonetique.evolution_phonetique("APPELLARMUS")) # apelleront
-print(EvolutionPhonetique.evolution_phonetique("APǪRTAT")) # aporta
+print(EvolutionPhonetique.evolution_phonetique("APPĘLLARMUS")) # apelleront
+print(EvolutionPhonetique.evolution_phonetique("A PǪRTAT")) # aporta
 print(EvolutionPhonetique.evolution_phonetique("APPRĘSSU")) # après
 print(EvolutionPhonetique.evolution_phonetique("A RE TENÚTS")) # aretenuz
 print(EvolutionPhonetique.evolution_phonetique("ALTRE")) # autre
 print(EvolutionPhonetique.evolution_phonetique("ALTRES")) # autres
 print(EvolutionPhonetique.evolution_phonetique("APĘC")) # avec
-print(EvolutionPhonetique.evolution_phonetique("AVÍSUS")) # avis
-print(EvolutionPhonetique.evolution_phonetique("ABĘAT")) # avoit
+print(EvolutionPhonetique.evolution_phonetique("A VÍSU")) # avis
+print(EvolutionPhonetique.evolution_phonetique("ABĘT")) # avoit
 print(EvolutionPhonetique.evolution_phonetique("AWWST")) # aüst
 print(EvolutionPhonetique.evolution_phonetique("BELLU")) # bel
 print(EvolutionPhonetique.evolution_phonetique("BENẸDÍTA")) # beneoite
 print(EvolutionPhonetique.evolution_phonetique("BENẸDÍTS")) # beneoiz
 print(EvolutionPhonetique.evolution_phonetique("BENẸDÍRE")) # beneïr
 print(EvolutionPhonetique.evolution_phonetique("BENẸDÍCT")) # beneït
-print(EvolutionPhonetique.evolution_phonetique("BẸNE")) # bien
+print(EvolutionPhonetique.evolution_phonetique("BĘNE")) # bien
 print(EvolutionPhonetique.evolution_phonetique("BONA")) # bone
 print(EvolutionPhonetique.evolution_phonetique("CESTU")) # cest
 print(EvolutionPhonetique.evolution_phonetique("CANTÁRE")) # chanter
-print(EvolutionPhonetique.evolution_phonetique("CASCUNU")) # chascun
-print(EvolutionPhonetique.evolution_phonetique("CASCUNA")) # chascune
+print(EvolutionPhonetique.evolution_phonetique("CASCÚNU")) # chascun
+print(EvolutionPhonetique.evolution_phonetique("CASCÚNA")) # chascune
 print(EvolutionPhonetique.evolution_phonetique("CASCUNUS")) # chascuns
 print(EvolutionPhonetique.evolution_phonetique("CARA")) # cher
 print(EvolutionPhonetique.evolution_phonetique("CÍSTU")) # cist
@@ -37,7 +37,7 @@ print(EvolutionPhonetique.evolution_phonetique("COMẸNTYAVĪ")) # comencié
 print(EvolutionPhonetique.evolution_phonetique("COMPÁNYA")) # compaigni
 print(EvolutionPhonetique.evolution_phonetique("COMPÁNYỌNS")) # compaignons
 print(EvolutionPhonetique.evolution_phonetique(" ")) # contrit
-print(EvolutionPhonetique.evolution_phonetique("CỌRSO")) # cuer
+print(EvolutionPhonetique.evolution_phonetique("CǪRE")) # cuer
 print(EvolutionPhonetique.evolution_phonetique("COSTÚDME")) # costume
 print(EvolutionPhonetique.evolution_phonetique("CREÁTǪRE")) # creator
 print(EvolutionPhonetique.evolution_phonetique("CRISTO")) # crist
@@ -54,19 +54,19 @@ print(EvolutionPhonetique.evolution_phonetique("DÍRÁ")) # dirai
 print(EvolutionPhonetique.evolution_phonetique("DIXÍT")) # disit
 print(EvolutionPhonetique.evolution_phonetique("DIXĘT")) # disoit
 print(EvolutionPhonetique.evolution_phonetique("DIT")) # dit
-print(EvolutionPhonetique.evolution_phonetique("DITAS")) # dites
+print(EvolutionPhonetique.evolution_phonetique("DITTAS")) # dites
 print(EvolutionPhonetique.evolution_phonetique("DEBĘT")) # doit
 print(EvolutionPhonetique.evolution_phonetique("DOMẸNTRAS")) # domentres
 print(EvolutionPhonetique.evolution_phonetique("DỌNT")) # dont
 print(EvolutionPhonetique.evolution_phonetique("DORMÍRE")) # dormir
 print(EvolutionPhonetique.evolution_phonetique("DORMĘT")) # dormoit
-print(EvolutionPhonetique.evolution_phonetique("DOLCA")) # douce
-print(EvolutionPhonetique.evolution_phonetique("DOLCAMẸNTE")) # doucement
+print(EvolutionPhonetique.evolution_phonetique("DỌLCA")) # douce
+print(EvolutionPhonetique.evolution_phonetique("DỌLCAMẸNTE")) # doucement
 print(EvolutionPhonetique.evolution_phonetique("EN")) # en
 print(EvolutionPhonetique.evolution_phonetique("ENDǪRMÍS")) # endormis
-print(EvolutionPhonetique.evolution_phonetique("ẸN ODYÁTS")) # enoez
-print(EvolutionPhonetique.evolution_phonetique("ENTENDĘT")) # entendoit
-print(EvolutionPhonetique.evolution_phonetique("ẸNTẸGRÍNAMẸNTE")) # enterinement
+print(EvolutionPhonetique.evolution_phonetique("ẸN OÁTS")) # enoez
+print(EvolutionPhonetique.evolution_phonetique("ENTẸNDĘT")) # entendoit
+print(EvolutionPhonetique.evolution_phonetique("ẸN TEGRÍNAMẸNTE")) # enterinement
 print(EvolutionPhonetique.evolution_phonetique("ẸNTẸGRÍNAS")) # enterines
 print(EvolutionPhonetique.evolution_phonetique("ẸNTỌR")) # entor
 print(EvolutionPhonetique.evolution_phonetique("ẸNTRA")) # entre
@@ -79,7 +79,7 @@ print(EvolutionPhonetique.evolution_phonetique("EST")) # est
 print(EvolutionPhonetique.evolution_phonetique("ESTĘT")) # estoit
 print(EvolutionPhonetique.evolution_phonetique("ESVẸGLATS")) # esveillez
 print(EvolutionPhonetique.evolution_phonetique("ET")) # et
-print(EvolutionPhonetique.evolution_phonetique("OCLOS")) # euz
+print(EvolutionPhonetique.evolution_phonetique("ỌCLOS")) # euz
 print(EvolutionPhonetique.evolution_phonetique("EPẸSCPOS")) # evesques
 print(EvolutionPhonetique.evolution_phonetique("EPẸSCPU")) # evesquë
 print(EvolutionPhonetique.evolution_phonetique("FÁCRE")) # faire
@@ -88,7 +88,7 @@ print(EvolutionPhonetique.evolution_phonetique("FÍLYU")) # fil
 print(EvolutionPhonetique.evolution_phonetique("FẸCS")) # foiz
 print(EvolutionPhonetique.evolution_phonetique("FRỌYTS")) # fruiz
 print(EvolutionPhonetique.evolution_phonetique("FÚT")) # fu
-print(EvolutionPhonetique.evolution_phonetique("FÚRENT")) # furent
+print(EvolutionPhonetique.evolution_phonetique("FÚRUNT")) # furent
 print(EvolutionPhonetique.evolution_phonetique("GÁRDA")) # garda
 print(EvolutionPhonetique.evolution_phonetique("GENÍTRÍXA")) # genitrix
 print(EvolutionPhonetique.evolution_phonetique("GLORÍỌSSA")) # glorïouse
@@ -96,7 +96,7 @@ print(EvolutionPhonetique.evolution_phonetique("GRATYAS")) # gracias
 print(EvolutionPhonetique.evolution_phonetique("GRATYA")) # gratia
 print(EvolutionPhonetique.evolution_phonetique("HABET")) # ha
 print(EvolutionPhonetique.evolution_phonetique("HORAS")) # hores
-print(EvolutionPhonetique.evolution_phonetique("IL")) # il
+# print(EvolutionPhonetique.evolution_phonetique("IL")) # il
 print(EvolutionPhonetique.evolution_phonetique("EXÍT")) # issi
 print(EvolutionPhonetique.evolution_phonetique("GAUDÍAMẸNTE")) # joiosement
 print(EvolutionPhonetique.evolution_phonetique("DYǪRNU")) # jor
@@ -122,36 +122,36 @@ print(EvolutionPhonetique.evolution_phonetique("MỌNYCU")) # moino
 print(EvolutionPhonetique.evolution_phonetique("MỌNYCOS")) # moines
 print(EvolutionPhonetique.evolution_phonetique("MOLTU")) # mout
 print(EvolutionPhonetique.evolution_phonetique("MON")) # mon
-print(EvolutionPhonetique.evolution_phonetique("MONÁSTĘRYU")) # mostier
+print(EvolutionPhonetique.evolution_phonetique("MOSTĘRYU")) # mostier
 print(EvolutionPhonetique.evolution_phonetique("MỌTTU")) # mot
 print(EvolutionPhonetique.evolution_phonetique("NETA")) # nete
 print(EvolutionPhonetique.evolution_phonetique("NOS")) # nos
 print(EvolutionPhonetique.evolution_phonetique("NOSTRO")) # nostron
 print(EvolutionPhonetique.evolution_phonetique("NǪCTE")) # nuit
 print(EvolutionPhonetique.evolution_phonetique("NỌMME")) # num
-print(EvolutionPhonetique.evolution_phonetique("AWWUNT")) # ont
+print(EvolutionPhonetique.evolution_phonetique("ÁWWUNT")) # ont
 print(EvolutionPhonetique.evolution_phonetique("ORGANU")) # orgen
-print(EvolutionPhonetique.evolution_phonetique("AWWIT")) # ot
-print(EvolutionPhonetique.evolution_phonetique("AUDÍT")) # oï
+print(EvolutionPhonetique.evolution_phonetique("ÁWWIT")) # ot
+print(EvolutionPhonetique.evolution_phonetique("AUDÍ")) # oï
 print(EvolutionPhonetique.evolution_phonetique("PAR")) # par
-print(EvolutionPhonetique.evolution_phonetique("PARLÁT")) # parlé
+print(EvolutionPhonetique.evolution_phonetique("PARLAT")) # parlé
 print(EvolutionPhonetique.evolution_phonetique("PARTÍT")) # partit
 print(EvolutionPhonetique.evolution_phonetique("PAS")) # pas
 print(EvolutionPhonetique.evolution_phonetique("PLẸNA")) # plena
 print(EvolutionPhonetique.evolution_phonetique("POR")) # por
 print(EvolutionPhonetique.evolution_phonetique("PRECÍỌSSA")) # precïose
 print(EvolutionPhonetique.evolution_phonetique("PRÍST")) # prist
-print(EvolutionPhonetique.evolution_phonetique("PROFĘTTA")) # prophete
+print(EvolutionPhonetique.evolution_phonetique("PROPHĘTTA")) # prophete
 print(EvolutionPhonetique.evolution_phonetique("PǪYS")) # puis
 print(EvolutionPhonetique.evolution_phonetique("PURA")) # pure
-print(EvolutionPhonetique.evolution_phonetique("QWANTU")) # quant
-print(EvolutionPhonetique.evolution_phonetique("CANTÍCOS")) # quantiques
+print(EvolutionPhonetique.evolution_phonetique("QWÁNTU")) # quant
+print(EvolutionPhonetique.evolution_phonetique("CANTÍQWOS")) # quantiques
 print(EvolutionPhonetique.evolution_phonetique("CAR")) # quar
 print(EvolutionPhonetique.evolution_phonetique("QUE")) # quë
 print(EvolutionPhonetique.evolution_phonetique("QUI")) # qui
-print(EvolutionPhonetique.evolution_phonetique("RE GARDÁRE")) # reguardé
+print(EvolutionPhonetique.evolution_phonetique("RE GARDÁ")) # reguardé
 print(EvolutionPhonetique.evolution_phonetique("REND")) # rent
-print(EvolutionPhonetique.evolution_phonetique("RESPỌNDÍT")) # respondit
+print(EvolutionPhonetique.evolution_phonetique("RESPǪNDÍT")) # respondit
 print(EvolutionPhonetique.evolution_phonetique("REVĘRTÍT")) # revertit
 print(EvolutionPhonetique.evolution_phonetique("SACRAS")) # sacrez
 print(EvolutionPhonetique.evolution_phonetique("SÁNCTU")) # saint
@@ -162,11 +162,11 @@ print(EvolutionPhonetique.evolution_phonetique("SALÚA")) # salua
 print(EvolutionPhonetique.evolution_phonetique("SE")) # se
 print(EvolutionPhonetique.evolution_phonetique("SEDĘNT")) # seent
 print(EvolutionPhonetique.evolution_phonetique("SENYǪR")) # seignor
-print(EvolutionPhonetique.evolution_phonetique("SENĘSTRA")) # senestre
+print(EvolutionPhonetique.evolution_phonetique("SENĘSSTRA")) # senestre
 print(EvolutionPhonetique.evolution_phonetique("SERVÍRE")) # servir
 print(EvolutionPhonetique.evolution_phonetique("SERVÍS")) # servis
 print(EvolutionPhonetique.evolution_phonetique("SES")) # ses
-print(EvolutionPhonetique.evolution_phonetique("SIDĘT")) # sidoit
+print(EvolutionPhonetique.evolution_phonetique("SÍDĘT")) # sidoit
 print(EvolutionPhonetique.evolution_phonetique("SĘES")) # soies
 print(EvolutionPhonetique.evolution_phonetique("SON")) # son
 print(EvolutionPhonetique.evolution_phonetique("SONATS")) # sonez
@@ -182,21 +182,21 @@ print(EvolutionPhonetique.evolution_phonetique("TRES")) # tres
 print(EvolutionPhonetique.evolution_phonetique("TU")) # tu
 print(EvolutionPhonetique.evolution_phonetique("UNU")) # un
 print(EvolutionPhonetique.evolution_phonetique("UNA")) # une
-print(EvolutionPhonetique.evolution_phonetique("VIGYLÁRE")) # veiller
-print(EvolutionPhonetique.evolution_phonetique("VIGYLĘT")) # veilloit
+print(EvolutionPhonetique.evolution_phonetique("VẸGYLÁRE")) # veiller
+print(EvolutionPhonetique.evolution_phonetique("VẸGYLĘT")) # veilloit
 print(EvolutionPhonetique.evolution_phonetique("VENÍRE")) # venir
 print(EvolutionPhonetique.evolution_phonetique("VENÍTA")) # venite
-print(EvolutionPhonetique.evolution_phonetique("VENÍTĘT")) # venoit
+print(EvolutionPhonetique.evolution_phonetique("VENĘT")) # venoit
 print(EvolutionPhonetique.evolution_phonetique("VENTRU")) # ventre
 print(EvolutionPhonetique.evolution_phonetique("VENÚ")) # venue
 print(EvolutionPhonetique.evolution_phonetique("VERSU")) # vers
 print(EvolutionPhonetique.evolution_phonetique("VITA")) # vie
-print(EvolutionPhonetique.evolution_phonetique("VĘNYIT")) # vient
+print(EvolutionPhonetique.evolution_phonetique("VĘNIT")) # vient
 print(EvolutionPhonetique.evolution_phonetique("VIRGA")) # virgë
-print(EvolutionPhonetique.evolution_phonetique("VISU")) # vois
+print(EvolutionPhonetique.evolution_phonetique("VĘSU")) # vois
 print(EvolutionPhonetique.evolution_phonetique("VITU")) # vit
-print(EvolutionPhonetique.evolution_phonetique("VISUT")) # voit
+print(EvolutionPhonetique.evolution_phonetique("VĘSUT")) # voit
 print(EvolutionPhonetique.evolution_phonetique("VOCES")) # voiz
-print(EvolutionPhonetique.evolution_phonetique("VẸDẸRE")) # vooir
+print(EvolutionPhonetique.evolution_phonetique("VEDẸRE")) # vooir
 print(EvolutionPhonetique.evolution_phonetique("VOS")) # vos
 print(EvolutionPhonetique.evolution_phonetique("VỌTA")) # vout

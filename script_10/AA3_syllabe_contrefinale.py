@@ -368,7 +368,7 @@ class SyllabeContrefinale:
                         #Les palatales combinées s'affaiblissent toutes en [ir]
                         if syllabes[-5][-1] in listes_lettres['toutes_les_voyelles']:
                             #Si le yod est déjà présent, pas besoin de amrquer un i supplémentaire
-                            if syllabes[-5][-1] in ['Ę', 'Í']:
+                            if syllabes[-5][-1] in ['E', 'Ę', 'Í']:
                                 changements.append('r')
                             else:
                                 changements.append('ir')
@@ -950,8 +950,11 @@ class SyllabeContrefinale:
 
         #O
         elif 'O' in syllabes[-4]:
+            #Présence d'un préfixe
+            if syllabes[-5][-1] == ' ':
+                changements.append('o')
             #Cas où la longueur syllabique est d'une lettre
-            if len(syllabes[-4]) == 1:
+            elif len(syllabes[-4]) == 1:
                 #En cas de hiatus avec la tonique précédente, la voyelle devient tonique
                 if syllabes[-5][-1] in listes_lettres['voyelles_toniques']:
                     changements.append('ou')

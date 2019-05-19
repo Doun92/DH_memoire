@@ -500,7 +500,10 @@ class SyllabeInitiale:
         elif 'E' in syllabes[0]:
             #Cas où la longueur syllabique est d'une lettre
             if len(syllabes[0]) == 1:
-                changements.append('e')
+                if syllabes[1][0] + syllabes[1][1] == 'XÍ':
+                    changements.append('i')
+                else:
+                    changements.append('e')
             #Si E se trouve en position ouvert
             elif syllabes[0][-1] == 'E':
                 changements.append('e')
@@ -609,7 +612,7 @@ class SyllabeInitiale:
                     changements.append('ie')
                 #Absence de diphtongaison due à une nasale
                 elif len(syllabes) > 1 and syllabes[1][0] in ['C', 'M', 'N']:
-                    if syllabes[1][1] == 'Y':
+                    if syllabes[1][1] in ['R', 'Y']:
                         changements.append('a')
                     else:
                         changements.append('ai')
@@ -628,7 +631,7 @@ class SyllabeInitiale:
             elif syllabes[0][-2] == 'Á':
                 #Absence de diphtongaison du à une nasale
                 if syllabes[0][-1] == 'N':
-                    if syllabes[0][0] + syllabes[0][1] == 'GR':
+                    if syllabes[0][0] + syllabes[0][1] in ['GR', 'QW']:
                         changements.append('a')
                     elif syllabes[1][0] + syllabes[1][1] == 'CR':
                         changements.append('a')

@@ -35,9 +35,9 @@ listes_lettres = {
 
 'voyelles_vélaires' : ['O', "Ǫ", "Ọ", 'U', "Ú"],
 
-'consonnes' : ['B', 'C', 'D', 'F', 'G', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z'],
+'consonnes' : ['B', 'C', 'D', 'F', 'G', 'H', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'X', 'Z'],
 
-'consonnes_et_semi_consonnes' : ['B', 'C', 'D', 'F', 'G', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'],
+'consonnes_et_semi_consonnes' : ['B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Y', 'Z'],
 
 'consonnes_liquides' : ["R", "L"],
 
@@ -439,7 +439,10 @@ class SyllabePenultieme:
                     #Les occlusives sonores combinées au yod trouvent leur point d'éqilibre dans la zone palatale
                     elif syllabes[-2][1] == 'Y':
                         if syllabes[-3][-1] in listes_lettres['toutes_les_voyelles']:
-                            changements.append('i')
+                            if syllabes[-3][-1] in ['Ẹ', 'Í']:
+                                changements.append('')
+                            else:
+                                changements.append('i')
                         elif syllabes[-2][2] == 'U':
                             changements.append('g')
                         else:
@@ -496,7 +499,10 @@ class SyllabePenultieme:
                 if syllabes[-2][1] in listes_lettres['consonnes_et_semi_consonnes']:
                     changements.append(syllabes[-2][1])
                 else:
-                    changements.append(syllabes[-2][0])
+                    if syllabes[-3][-1] == 'P':
+                        changements.append('ph')
+                    else:
+                        changements.append(syllabes[-2][0])
 
             #Gestion de J (Surtout utile pour les mots provenant du germain)
             elif syllabes[-2][0] == 'J':
@@ -560,6 +566,8 @@ class SyllabePenultieme:
                     #Mouillure de L
                     elif syllabes[-3][-1] == 'Y':
                         if syllabes[-3][-2] == 'A' and syllabes[-2][1] == 'Í':
+                            changements.append('ll')
+                        elif syllabes[-3][-2] == 'G' and syllabes[-2][1] == 'Á':
                             changements.append('ll')
                         else:
                             changements.append('l')
@@ -792,6 +800,8 @@ class SyllabePenultieme:
                             #Éléments triples (consonne + liquide + semi-voyelle)
                             elif syllabes[-1][0] == 'Y':
                                 changements.append('tr')
+                            elif syllabes[-3][-1] == 'Í':
+                                changements.append('tr')
                             else:
                                 changements.append('r')
                         #En position intiale, tout élément consonantique complexe constitué d'une consonne et d'une liquide demeure intact
@@ -823,7 +833,12 @@ class SyllabePenultieme:
                                 else:
                                     changements.append('c')
                             elif syllabes[-3][-1] in ['N', 'S']:
-                                changements.append('t')
+                                if syllabes[2][2] in ['A', 'Á']:
+                                    changements.append('c')
+                                elif syllabes[2][2] == 'Ǫ':
+                                    changements.append('ç')
+                                else:
+                                    changements.append('t')
                             # if len(syllabes[-2]) > 2 and syllabes[-2][2] in ['O', 'Ọ', 'Ǫ']:
                             #     changements.append('ç')
                             # elif len(syllabes[-2]) > 2 and syllabes[-2][2] == 'Á':
@@ -887,10 +902,10 @@ class SyllabePenultieme:
                     #Consonne en milieu intervocalique
                     if syllabes[-3][-1] in listes_lettres['toutes_les_voyelles']:
                         #En milieu vélaire, la consonne subit un amuïssement
-                        if syllabes[-2][1] in ['Ę', 'Ẹ', 'Í', 'O', 'Ọ', 'U']:
+                        if syllabes[-2][1] in ['E', 'Ę', 'Ẹ', 'Í', 'O', 'Ọ', 'U']:
                             if len(syllabes[-2]) > 2 and syllabes[-2][2] == 'N':
                                 changements.append('v')
-                            elif syllabes[-3][-1] == 'O' and syllabes[-2][1] == 'Ę':
+                            elif syllabes[-3][-1] in ['E', 'O'] and syllabes[-2][1] == 'Ę':
                                 changements.append('v')
                             else:
                                 changements.append('')
@@ -1093,8 +1108,11 @@ class SyllabePenultieme:
 
         #E
         elif 'E' in syllabes[-2]:
+            #Présence d'un préfixe
+            if syllabes[-3][-1] == ' ':
+                changements.append('e')
             #Cas où la longueur syllabique est d'une lettre
-            if len(syllabes[-2]) == 1:
+            elif len(syllabes[-2]) == 1:
                 #En cas de hiatus avec la tonique précédente, la voyelle devient tonique
                 if syllabes[-3][-1] in listes_lettres['voyelles_toniques']:
                     changements.append('ei')
@@ -1476,6 +1494,8 @@ class SyllabePenultieme:
             elif syllabes[-2][-1] == 'Í':
                 if syllabes[-1] == 'E':
                     changements.append('i')
+                elif syllabes[-3][-1] == 'Ẹ':
+                    changements.append('')
                 else:
                     changements.append('i')
             elif syllabes[-2][-2] == 'Í':
@@ -1759,7 +1779,10 @@ class SyllabePenultieme:
                         else:
                             changements.append('')
                     elif syllabes[-1][1] in listes_lettres['voyelles_atones_sans_A'] and syllabes[-1][-1] in ['T', 'S']:
-                        changements.append('')
+                        if syllabes[-1][1] + syllabes[-1][2] == 'OS':
+                            changements.append('q')
+                        else:
+                            changements.append('')
                     else:
                         changements.append('v')
                 else:

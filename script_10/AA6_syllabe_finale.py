@@ -134,8 +134,10 @@ class SyllabeFinale:
                         elif syllabes[-1][1] == 'Y':
                             #En milieu palatal
                             if syllabes[-2][-1] == 'Á':
-                                if syllabes[-1][2] == 'A':
+                                if syllabes[-1][2] in ['A', 'O']:
                                     changements.append('')
+                                elif syllabes[-1][2] == syllabes[-1][-1] == 'T':
+                                    changements.append('t')
                                 else:
                                     changements.append('v')
                             else:
@@ -192,7 +194,7 @@ class SyllabeFinale:
                     elif syllabes[-1][1] == 'N':
                         changements.append('gn')
                     elif syllabes[-1][1] == 'P':
-                        if syllabes[-1][2] == 'U':
+                        if syllabes[-1][2] in ['O', 'U']:
                             changements.append('qu')
                         else:
                             changements.append('c')
@@ -201,7 +203,7 @@ class SyllabeFinale:
                             if syllabes[-2][-1] in ['Í']:
                                 changements.append('r')
                             elif syllabes[-2][-1] == 'Á':
-                                changements.append('gr')
+                                changements.append('cr')
                             else:
                                 changements.append('ir')
                         #Si un Y est antéposé inorganiquement
@@ -389,7 +391,10 @@ class SyllabeFinale:
                             changements.append('t')
                         #Amuïssement de la dentale en milieu intervocalique
                         else:
-                            changements.append('')
+                            if syllabes[-2][-1] == 'Í' and syllabes[-1][1] == 'Ę':
+                                changements.append('d')
+                            else:
+                                changements.append('')
                     #Consonantisme explosif
                     #Les occlusives sonores à l'initiale de la syllabe s'assourdissent si elles aboutissent en finale absolue
                     elif syllabes[-1][1] in listes_lettres['voyelles_atones_sans_A'] and syllabes[-1][1] == syllabes[-1][-1]:
@@ -448,6 +453,8 @@ class SyllabeFinale:
                         if syllabes[-2][-1] in listes_lettres['toutes_les_voyelles']:
                             if syllabes[-2][-1] in ['A', 'Á'] and syllabes[-1][2] in ['A', 'Á']:
                                 changements.append('ill')
+                            elif syllabes[-2][-1] == 'Ẹ' and syllabes[-1][2] == 'A':
+                                changements.append('ll')
                             else:
                                 changements.append('il')
                         else:
@@ -676,8 +683,13 @@ class SyllabeFinale:
                         changements.append(syllabes[-1][1])
                 else:
                     #Assimilation à la consonne précédente
-                    if syllabes[-2][-1] in ['M', 'R']:
+                    if syllabes[-2][-1] == 'M':
                         changements.append('')
+                    elif syllabes[-2][-1] == 'R':
+                        if syllabes[-1][1] in ['A', 'Á']:
+                            changements.append('n')
+                        else:
+                            changements.append('')
                     elif syllabes[-2][-1] == 'Ę' and syllabes[-1][1] == 'A':
                         changements.append('nn')
                     #Mouillure du N
@@ -731,7 +743,10 @@ class SyllabeFinale:
                             changements.append('')
                         #Pluriel
                         elif syllabes[-1][1] == 'Ę':
-                            changements.append('p')
+                            if syllabes[-2][-1] == 'A':
+                                changements.append('v')
+                            else:
+                                changements.append('p')
                         else:
                             changements.append('f')
                     #Consonantisme explosif
@@ -1008,7 +1023,10 @@ class SyllabeFinale:
                             changements.append('v')
                     else:
                         if syllabes[-2][-1] == 'R':
-                            changements.append('')
+                            if syllabes[-1][1] == 'U':
+                                changements.append('')
+                            else:
+                                changements.append('v')
                         elif syllabes[-2][-1] == 'L' and syllabes[-1][1] == syllabes[-1][-1] and syllabes[-1][-1] in listes_lettres['voyelles_atones_sans_A']:
                             changements.append('f')
                         else:
@@ -1324,7 +1342,12 @@ class SyllabeFinale:
                         changements.append('')
             #Si O se trouve au milieu de la syllabe
             elif syllabes[-1][-2] == 'O':
-                if syllabes[-1][0] == syllabes[-1][-2]:
+                if syllabes[-1][-1] == 'S':
+                    if syllabes[-2][-1] + syllabes[-1][-3] == 'QW':
+                        changements.append('e')
+                    else:
+                        changements.append('')
+                elif syllabes[-1][0] == syllabes[-1][-2]:
                     if syllabes[-2][-1] == 'Ę':
                         changements.append('U')
                     else:
@@ -1429,7 +1452,10 @@ class SyllabeFinale:
                     changements.append('')
             #Tous les autres cas de figure
             else:
-                changements.append('e')
+                if syllabes[-2][-1] + syllabes[-1][0] == 'WW':
+                    changements.append('')
+                else:
+                    changements.append('e')
 
         #Vocalisme tonique (oxyton)
         #Á tonique
@@ -1463,7 +1489,7 @@ class SyllabeFinale:
             #Autres cas de figure, plus rare ou A tonique ne se trouve dans aucune de ces positions
             else:
                 if syllabes[-1][-2] + syllabes[-1][-1] == 'TS':
-                    if syllabes[-1][-4] == 'Y':
+                    if len(syllabes[-1]) > 3 and syllabes[-1][-4] == 'Y':
                         changements.append('ie')
                     elif syllabes[-2] == syllabes[0] == 'PRI':
                         changements.append('a')
@@ -1588,6 +1614,8 @@ class SyllabeFinale:
                 #Amuïssmeent en î
                 if syllabes[-1][-2] in ['A', 'Ẹ']:
                     changements.append('i')
+                elif syllabes[-1][-2] == 'N':
+                    changements.append('nc')
                 #Assimilation
                 else:
                     changements.append('')

@@ -96,6 +96,10 @@ class SyllabeContrepenultieme:
 
         changements = list()
 
+        #Existence d'un préfixe
+        if syllabes[-5][0] == ' ':
+            changements.append(syllabes[-5][1])
+
         #Consoantisme initial
         if syllabes[-5][0] in listes_lettres['consonnes_et_semi_consonnes']:
 
@@ -890,7 +894,11 @@ class SyllabeContrepenultieme:
                 changements.append('')
             #Si E se trouve en position ouvert
             elif syllabes[-5][-1] == 'E':
-                changements.append('')
+                #Préfixe
+                if syllabes[-5][0] == ' ':
+                    changements.append('e')
+                else:
+                    changements.append('')
             #Si E se trouve au milieu de la syllabe
             elif syllabes[-5][-2] == 'E':
                 #En cas de hiatus avec la tonique précédente, la voyelle devient tonique

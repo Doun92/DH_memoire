@@ -77,38 +77,96 @@ class EvolutionPhonetique:
 
 
 
-def main():
+# def main():
+#
+#     #Importation de librairies diverses
+#     import re
+#     import collections
+#
+#     #Importation du dictionnaire de tous les mots du texte
+#     # from dictionary import dict
+#     # from Mariale_1_dict import dict
+#     from Moine_dict import dict
+#     keys = dict.keys()
+#     values = dict.values()
+#     # print(keys)
+#     # print(values)
+#
+#     every_word = open('AA_every_word.txt', 'w', encoding = 'utf-8')
+#     catch = open('AA_catch.txt', 'w+', encoding = 'utf-8')
+#     dont_catch = open('AA_dont_catch.txt', 'w+', encoding = 'utf-8')
+#
+#     # print(len(dict_Marie))
+#
+#     for key in keys:
+#         print_final = EvolutionPhonetique.evolution_phonetique(key)
+#
+#         every_word.write('\n %s > %s \n \n' % (key, print_final) + '----------------------------------------- \n' )
+#         # print(key)
+#         # print(dict_Marie[key])
+#         # print(print_final)
+#
+#         if print_final == dict[key] or print_final in dict[key]: #Ce serait ici qu'il faudrait modifier
+#             catch.write('\n %s > %s == %s \n \n' % (key, print_final, dict[key]) + '----------------------------------------- \n')
+#         else:
+#             dont_catch.write(('\n %s > %s != %s \n \n' % (key, print_final, dict[key]) + '----------------------------------------- \n'))
+#
+# main()
 
-    #Importation de librairies diverses
-    import re
-    import collections
-
-    #Importation du dictionnaire de tous les mots du texte
-    # from dictionary import dict
-    # from Mariale_1_dict import dict
-    from Moine_dict import dict
-    keys = dict.keys()
-    values = dict.values()
-    # print(keys)
-    # print(values)
-
-    every_word = open('AA_every_word.txt', 'w', encoding = 'utf-8')
-    catch = open('AA_catch.txt', 'w+', encoding = 'utf-8')
-    dont_catch = open('AA_dont_catch.txt', 'w+', encoding = 'utf-8')
-
-    # print(len(dict_Marie))
-
-    for key in keys:
-        print_final = EvolutionPhonetique.evolution_phonetique(key)
-
-        every_word.write('\n %s > %s \n \n' % (key, print_final) + '----------------------------------------- \n' )
-        # print(key)
-        # print(dict_Marie[key])
-        # print(print_final)
-
-        if print_final == dict[key] or print_final in dict[key]: #Ce serait ici qu'il faudrait modifier
-            catch.write('\n %s > %s == %s \n \n' % (key, print_final, dict[key]) + '----------------------------------------- \n')
-        else:
-            dont_catch.write(('\n %s > %s != %s \n \n' % (key, print_final, dict[key]) + '----------------------------------------- \n'))
-
-main()
+# print(EvolutionPhonetique.evolution_phonetique("A COSTÚDMÁRU")) # acotumé
+# print(EvolutionPhonetique.evolution_phonetique("A DỌNC")) # adonc
+# print(EvolutionPhonetique.evolution_phonetique("HÁBYO")) # ai
+# print(EvolutionPhonetique.evolution_phonetique("HÁBYT")) # ait
+# print(EvolutionPhonetique.evolution_phonetique("AMĘT")) # amoit
+# print(EvolutionPhonetique.evolution_phonetique("APPĘLLARMUS")) # apelleront
+# print(EvolutionPhonetique.evolution_phonetique("A PǪRTAT")) # aporta
+# print(EvolutionPhonetique.evolution_phonetique("A RE TENÚTS")) # aretenuz
+# print(EvolutionPhonetique.evolution_phonetique("APĘC")) # avec
+# print(EvolutionPhonetique.evolution_phonetique("A VÍSU")) # avis
+# print(EvolutionPhonetique.evolution_phonetique("ABĘT")) # avoit
+# print(EvolutionPhonetique.evolution_phonetique("BENẸDÍTA")) # beneoite
+# print(EvolutionPhonetique.evolution_phonetique("BĘNE")) # bien
+# print(EvolutionPhonetique.evolution_phonetique("CASCÚNA")) # chascune
+# print(EvolutionPhonetique.evolution_phonetique("COMẸNTYAVĪ")) # comencié
+# print(EvolutionPhonetique.evolution_phonetique("CǪRE")) # cuer
+# print(EvolutionPhonetique.evolution_phonetique("DITTAS")) # dites
+# print(EvolutionPhonetique.evolution_phonetique("DỌLCA")) # douce
+# print(EvolutionPhonetique.evolution_phonetique("DỌLCAMẸNTE")) # doucement
+# print(EvolutionPhonetique.evolution_phonetique("ẸN OÁTS")) # enoez
+# print(EvolutionPhonetique.evolution_phonetique("ENTẸNDĘT")) # entendoit
+# print(EvolutionPhonetique.evolution_phonetique("ẸN TEGRÍNAMẸNTE")) # enterinement
+# print(EvolutionPhonetique.evolution_phonetique("ESVẸGLATS")) # esveillez
+# print(EvolutionPhonetique.evolution_phonetique("ỌCLOS")) # euz
+# print(EvolutionPhonetique.evolution_phonetique("EPẸSCPOS")) # evesques
+# print(EvolutionPhonetique.evolution_phonetique("FÁCRE")) # faire
+# print(EvolutionPhonetique.evolution_phonetique("FẸCS")) # foiz
+# print(EvolutionPhonetique.evolution_phonetique("FÚRUNT")) # furent
+# print(EvolutionPhonetique.evolution_phonetique("GENÍTRÍXA")) # genitrix
+# print(EvolutionPhonetique.evolution_phonetique("EXÍT")) # issi
+# print(EvolutionPhonetique.evolution_phonetique("LAUDAS")) # loes
+# print(EvolutionPhonetique.evolution_phonetique("MATTÍNAS")) # matines
+# print(EvolutionPhonetique.evolution_phonetique("MỌNYCOS")) # moines
+# print(EvolutionPhonetique.evolution_phonetique("MOSTĘRYU")) # mostier
+# print(EvolutionPhonetique.evolution_phonetique("ÁWWUNT")) # ont
+# print(EvolutionPhonetique.evolution_phonetique("ÁWWIT")) # ot
+# print(EvolutionPhonetique.evolution_phonetique("AUDÍ")) # oï
+# print(EvolutionPhonetique.evolution_phonetique("PARLAT")) # parlé
+# print(EvolutionPhonetique.evolution_phonetique("PRECÍỌSSA")) # precïose
+# print(EvolutionPhonetique.evolution_phonetique("PROPHĘTTA")) # prophete
+# print(EvolutionPhonetique.evolution_phonetique("QWÁNTU")) # quant
+# print(EvolutionPhonetique.evolution_phonetique("CANTÍQWOS")) # quantiques
+# print(EvolutionPhonetique.evolution_phonetique("RE GARDÁ")) # reguardé
+# print(EvolutionPhonetique.evolution_phonetique("RESPǪNDÍT")) # respondit
+# print(EvolutionPhonetique.evolution_phonetique("REVĘRTÍT")) # revertit
+# print(EvolutionPhonetique.evolution_phonetique("SÁCRAS")) # sacrez
+# print(EvolutionPhonetique.evolution_phonetique("SÁNCTOS")) # sainz
+# print(EvolutionPhonetique.evolution_phonetique("SENĘSSTRA")) # senestre
+# print(EvolutionPhonetique.evolution_phonetique("SERVÍS")) # servis
+# print(EvolutionPhonetique.evolution_phonetique("SÍDĘT")) # sidoit
+# print(EvolutionPhonetique.evolution_phonetique("SĘS")) # soies
+# print(EvolutionPhonetique.evolution_phonetique("TORNA")) # torna
+# print(EvolutionPhonetique.evolution_phonetique("VẸGYLÁRE")) # veiller
+# print(EvolutionPhonetique.evolution_phonetique("VẸGYLĘT")) # veilloit
+# print(EvolutionPhonetique.evolution_phonetique("VENĘT")) # venoit
+# print(EvolutionPhonetique.evolution_phonetique("VĘNIT")) # vient
+print(EvolutionPhonetique.evolution_phonetique("VEDẸRE")) # vooir
